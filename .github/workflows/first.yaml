@@ -6,17 +6,11 @@ jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: echo string
-        run: echo "Hello My Country people"
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: Multiline string
         run: |
           pwd
           node -v
           ls -a
-  run-windows-commands:
-    runs-on: windows-latest
-    #needs:["run-shell-commands"]
-    steps:
-      - name: Directory
-        run: pwd
-        shell: bash
+  
