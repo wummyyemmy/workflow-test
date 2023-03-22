@@ -3,9 +3,9 @@ name: shell commands
 on:
   - push
 jobs:
-  run-shell-commands:
+  terraform-workflow:
     runs-on: ubuntu-latest
-#    steps:
+    steps:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Setup Terraform
