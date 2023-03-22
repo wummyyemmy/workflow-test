@@ -5,7 +5,7 @@ on:
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
-    steps:
+#    steps:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Setup Terraform
