@@ -15,12 +15,12 @@ resource "aws_vpc" "class30" {
     max = 9999
   }
 
-  resource "aws_kms_key" "${var.bucket_key}" {
+  resource "aws_kms_key" var.bucket_key {
     description = var.kms_key_description
     deletion_window_in_days = 10
   }
 
-  resource "aws_s3_bucket" "${var.s3_backend_bucket}" {
+  resource "aws_s3_bucket" var.s3_backend_bucket {
     bucket = "bootcamp30-${random_integer.bucket_suffix.result}-${var.name_suffix}"
     server_side_encryption_configuration {
       rule {
