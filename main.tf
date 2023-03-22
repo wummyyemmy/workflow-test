@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-2"
 }
 
-}
+
 resource "aws_vpc" "class30" {
   cidr_block = "192.168.0.0/22"
 
@@ -25,7 +25,7 @@ resource "aws_vpc" "class30" {
     server_side_encryption_configuration {
       rule {
         apply_server_side_encryption_by_default {
-          kms_master_key_id = aws_kms_key.${var.bucket_key}.arn
+          kms_master_key_id = aws_kms_key.{var.bucket_key}.arn
           sse_algorithm     = "aws:kms"
         }
       }
