@@ -9,7 +9,7 @@ resource "aws_vpc" "class30" {
   tags = {
     Name = "class30"
   }
-
+}
   resource "random_integer" "bucket_suffix" {
     min = 1000
     max = 9999
